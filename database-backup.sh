@@ -13,6 +13,12 @@ source $SCRIPT_DIR/config.cf
 #  MAGIC                       #
 ################################
 
+# Create backup directory if it doesn't exist
+if [ ! -d $SCRIPT_DIR/backups ]; then
+    mkdir $SCRIPT_DIR/backups
+fi
+
+# Backup all DB's locally
 for (( i = 0 ; i < ${#SERVERS[@]} ; i++ ))
 do
     SQL_DESTINATION=$SCRIPT_DIR/backups/${SERVERS[$i]}_$SUFFIX.sql.gz
