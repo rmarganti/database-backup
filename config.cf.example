@@ -1,0 +1,12 @@
+################################
+#  CONFIG                      #
+################################
+
+SERVERS=( example.com  123.456.78.901 )
+
+SSH_USER=rmarganti
+SSH_PASSWORD=superSecretPassword
+
+DB_USER=backupuser
+DB_PASSWORD=lkasdjflkjsadflkjasdf
+SUFFIX=$(date +%Y-%m-%d)
